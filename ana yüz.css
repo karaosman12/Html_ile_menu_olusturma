@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black; /* Siyah arka plan */
+}
+
+.navbar {
+  position: fixed; /* Sayfanın üstünde sabitlenmiş */
+  top: 0;
+  left: -250px; /* Menüyü gizle */
+  background-color: #333; /* Siyah */
+  width: 250px; /* Menü genişliği */
+  height: 100%; /* Ekran yüksekliği */
+  padding-top: 60px; /* Menü başlığından aşağıya mesafe */
+  overflow-x: hidden; /* Yatay taşmayı önle */
+  transition: 0.5s; /* Geçiş efekti */
+  z-index: 2; /* Menüyü diğer elementlerden üstte tut */
+}
+
+.navbar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555; /* Gri */
+}
+
+.menu-toggle {
+  display: block; /* Başlangıçta görünür */
+  position: fixed; /* Sayfanın üstünde sabitlenmiş */
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1; /* Menüden üstte görünmesini sağlar */
+  transition: opacity 0.3s; /* Opaklık geçişi */
+}
+
+.menu-toggle:hover {
+  background-color: #555; /* Gri */
+}
+
+.menu-toggle.hidden {
+  opacity: 0; /* Opaklığı sıfıra ayarla */
+  pointer-events: none; /* Tıklamaları devre dışı bırak */
+}
+
+/* Yeni içerik alanı */
+.content {
+  margin-top: 60px; /* Menü yüksekliği kadar boşluk bırak */
+  padding: 20px;
+  color: white;
+  position: relative; /* Pozisyonu belirle */
+  z-index: 1; /* İçeriği menünün altına yerleştir */
+  transition: margin-left 0.5s, font-size 0.5s; /* Geçiş efektleri */
+}
+
+.menu-open .content {
+  margin-left: 250px; /* Menü genişliği kadar sağa kaydır */
+  font-size: 16px; /* Yazı boyutunu küçült */
+}

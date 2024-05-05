@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Menü</title>
+<link rel="stylesheet" type="text/css" href="ana yüz.css"> <!-- CSS dosyasını bağla -->
+</head>
+<body>
+
+<button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</button>
+
+<div class="navbar" id="navbar">
+  <a href="#home">Ana Sayfa</a>
+  <a href="#news">Haberler</a>
+  <a href="#contact">İletişim</a>
+  <a href="#about">Hakkında</a>
+</div>
+
+<!-- Yeni içerik alanı -->
+<div class="content">
+  <div id="home">
+    <h2>Ana Sayfa</h2>
+    <p>Bu bir örnek web sitesidir.</p>
+    <p>Bu web sitesinin içeriği hakkında bilgi içeren bir metin.</p>
+  </div>
+
+  <div id="news" style="display:none;">
+    <h2>Haberler</h2>
+    <p>Burada güncel haberler bulunacak.</p>
+  </div>
+
+  <div id="contact" style="display:none;">
+    <h2>İletişim</h2>
+    <p>Bize ulaşabileceğiniz iletişim bilgileri:</p>
+    <ul>
+      <li>Email: example@example.com</li>
+      <li>Telefon: 123-456-7890</li>
+    </ul>
+  </div>
+
+  <div id="about" style="display:none;">
+    <h2>Hakkında</h2>
+    <p>Web sitesinin hakkında bilgi burada yer alacak.</p>
+  </div>
+</div>
+
+<script src="ana yüz.js"></script> <!-- JavaScript dosyasını bağla -->
+
+</body>
+</html>
